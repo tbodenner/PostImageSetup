@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Text.Json;
 using System.IO;
-using PostImageSetup.Class.Config;
-using PostImageSetup.Class.Baseline;
-using PostImageSetup.Class.Installs;
+using PostImageSetup.Class.SiteConfigs.Site;
+using PostImageSetup.Class.SiteConfigs.Installs;
+using PostImageSetup.Class.SiteConfigs.Baseline;
 
 namespace PostImageSetup.Class
 {

@@ -1,4 +1,4 @@
-﻿namespace PostImageSetup.Class.Installs
+﻿namespace PostImageSetup.Class.SiteConfigs.Installs
 {
   internal class InstallConfig
   {

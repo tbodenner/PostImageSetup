@@ -1,4 +1,4 @@
-﻿namespace PostImageSetup.Class.Baseline
+﻿namespace PostImageSetup.Class.SiteConfigs.Baseline
 {
   internal class BaselineConfig
   {

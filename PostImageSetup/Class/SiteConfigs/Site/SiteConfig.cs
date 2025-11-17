@@ -1,4 +1,4 @@
-﻿namespace PostImageSetup.Class.Config
+﻿namespace PostImageSetup.Class.SiteConfigs.Site
 {
   internal class SiteConfig
   {

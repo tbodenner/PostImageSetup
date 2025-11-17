@@ -1,4 +1,5 @@
 ﻿using PostImageSetup.Class;
+using PostImageSetup.Class.AppConfig;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -20,6 +21,7 @@ namespace PostImageSetup
     public MainWindow()
     {
       InitializeComponent();
+      AppConfigController acc = new();
       JsonConfigReader jcf = new();
       jcf.ReadConfig();
       jcf.ReadInstalls();
