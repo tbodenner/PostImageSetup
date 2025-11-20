@@ -8,10 +8,10 @@ namespace PostImageSetup.Class
 {
   internal static class JsonConfigReader
   {
-    private static readonly string TESTFilePath = "C:\\Users\\OITPREBODENT\\OneDrive - Department of Veterans Affairs\\Desktop\\GitHub\\Install-PostImageSetup";
-
-    private static string? GetJsonText(string jsonFilePath)
+    private static string? GetJsonText(string? rootPath, string? jsonFilename)
     {
+      if (rootPath == null || jsonFilename == null) { return null; }
+      string jsonFilePath = Path.Join(rootPath, jsonFilename);
       if (File.Exists(jsonFilePath))
       {
         return File.ReadAllText(jsonFilePath);
@@ -22,9 +22,10 @@ namespace PostImageSetup.Class
       }
     }
 
-    public static SiteConfig? ReadConfig()
+    public static SiteConfig? ReadConfig(string? rootPath)
     {
-      string? jsonText = GetJsonText("config.json");
+      if (rootPath == null) { return null; }
+      string? jsonText = GetJsonText(rootPath, "config.json");
       if (jsonText == null)
       {
         return null;
@@ -35,9 +36,10 @@ namespace PostImageSetup.Class
       }
     }
 
-    public static InstallConfig? ReadInstalls()
+    public static InstallConfig? ReadInstalls(string? rootPath)
     {
-      string? jsonText = GetJsonText("installs.json");
+      if (rootPath == null) { return null; }
+      string? jsonText = GetJsonText(rootPath, "installs.json");
       if (jsonText == null)
       {
         return null;
@@ -48,9 +50,10 @@ namespace PostImageSetup.Class
       }
     }
 
-    public static BaselineConfig? ReadBaseline()
+    public static BaselineConfig? ReadBaseline(string? rootPath)
     {
-      string? jsonText = GetJsonText("baseline.json");
+      if (rootPath == null) { return null; }
+      string? jsonText = GetJsonText(rootPath, "baseline.json");
       if (jsonText == null)
       {
         return null;

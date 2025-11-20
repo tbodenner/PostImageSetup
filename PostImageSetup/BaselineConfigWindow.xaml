@@ -6,7 +6,18 @@
         xmlns:local="clr-namespace:PostImageSetup"
         mc:Ignorable="d"
         Title="BaselineConfigWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+  <Grid>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="Auto"/>
+      <ColumnDefinition Width="100"/>
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+    </Grid.RowDefinitions>
+    <TreeView
+      Name="MainTreeView"
+      Grid.Column="0"
+      Grid.Row="0"
+      SelectedItemChanged="MainTreeView_SelectedItemChanged"/>
+  </Grid>
 </Window>

@@ -7,15 +7,16 @@ namespace PostImageSetup.Class.AppConfig
   internal class AppConfigController
   {
     // our config file
-    private static readonly string _configFilePath = ".\\appconfig.json";
+    private readonly string _configFilePath;
     // write our file using indentation
     private static readonly JsonSerializerOptions _jsonOptions = new() { WriteIndented = true };
 
     // our config data from the json file
     private AppConfig? _appConfig;
 
-    public AppConfigController()
+    public AppConfigController(string configFilePath)
     {
+      _configFilePath = configFilePath;
       // read our json
       ReadAppConfigJson();
     }
