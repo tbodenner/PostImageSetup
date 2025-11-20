@@ -55,4 +55,4 @@ nunit-*.xml
 
 # custom
 .vs/
-appconfig.json
+*.json
