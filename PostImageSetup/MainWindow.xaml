@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+      <StackPanel  Orientation="Vertical">
+      <Button Height="30" Width="100" Content="Baseline" Name="BaselineConfigButton" Click="BaselineConfigButton_Click" />
+      <Button Height="30" Width="100" Content="Site" Name="SiteConfigButton" Click="SiteConfigButton_Click" />
+      <Button Height="30" Width="100" Content="Installs" Name="InstallConfigButton" Click="InstallConfigButton_Click" />
+      </StackPanel>
     </Grid>
 </Window>

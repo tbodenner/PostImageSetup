@@ -3,4 +3,15 @@
   <PropertyGroup>
     <_LastSelectedProfileId>C:\Users\OITPREBODENT\OneDrive - Department of Veterans Affairs\Desktop\GitHub\PostImageSetup\PostImageSetup\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
   </PropertyGroup>
+  <ItemGroup>
+    <Compile Update="BaselineConfigWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="InstallConfigWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SiteConfigWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
 </Project>
