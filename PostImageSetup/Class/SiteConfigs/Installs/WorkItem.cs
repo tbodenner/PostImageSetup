@@ -1,8 +1,8 @@
 ﻿namespace PostImageSetup.Class.SiteConfigs.Installs
 {
-  internal class InstallItem
+  internal class WorkItem
   {
-    public string? InstallType { get; set; }
+    public string? Type { get; set; }
     public string? Name { get; set; }
     public string? FilePath { get; set; }
     public string? Arguments { get; set; }

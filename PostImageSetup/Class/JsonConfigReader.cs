@@ -46,7 +46,7 @@ namespace PostImageSetup.Class
       }
       else
       {
-        return new(JsonSerializer.Deserialize<InstallItem[]>(jsonText));
+        return new(JsonSerializer.Deserialize<WorkItem[]>(jsonText));
       }
     }
 

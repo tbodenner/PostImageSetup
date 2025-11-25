@@ -3,8 +3,8 @@ using PostImageSetup.Class.AppConfig;
 using PostImageSetup.Class.SiteConfigs.Baseline;
 using PostImageSetup.Class.SiteConfigs.Installs;
 using PostImageSetup.Class.SiteConfigs.Site;
-using System.Windows;
 using System.IO;
+using System.Windows;
 
 namespace PostImageSetup
 {
@@ -56,7 +56,7 @@ namespace PostImageSetup
     {
       if (_baselineConfig != null)
       {
-        Window window = new BaselineConfigWindow(_baselineConfig.TreeModel)
+        Window window = new BaselineConfigWindow(_baselineConfig.Baseline)
         {
           Owner = this,
           WindowStyle = WindowStyle.ToolWindow
@@ -72,6 +72,30 @@ namespace PostImageSetup
         WindowStyle = WindowStyle.ToolWindow
       };
       window.ShowDialog();
+    }
+
+    private void ButtonTest_Click(object sender, RoutedEventArgs e)
+    {
+      StartInstall();
+    }
+
+    private void StartInstall()
+    {
+      Installer installer = new("ECFax Messenger",
+                                "Installers\\ECFax Messenger\\ECFax-Messenger-1.5.1.37-Installer.msi",
+                                "ALLUSERS=1 /passive /norestart",
+                                "ECFax Messenger",
+                                true,
+                                true,
+                                false);
+      installer.InstallComplete += Installer_InstallComplete;
+      Thread thread = new(new ThreadStart(installer.StartInstall));
+      thread.Start();
+    }
+
+    private void Installer_InstallComplete(object? sender, EventArgs e)
+    {
+      MessageBox.Show("Install done!");
     }
   }
 }

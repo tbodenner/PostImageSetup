@@ -9,15 +9,29 @@
   <Grid>
     <Grid.ColumnDefinitions>
       <ColumnDefinition Width="Auto"/>
-      <ColumnDefinition Width="100"/>
+      <ColumnDefinition Width="Auto"/>
     </Grid.ColumnDefinitions>
     <Grid.RowDefinitions>
       <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
     </Grid.RowDefinitions>
-    <TreeView
-      Name="MainTreeView"
+    <Button
+      Name="ButtonAddGroup"
+      Content="Add Group"
+      Width="120"
+      Height="20"
+      Grid.ColumnSpan="2"
       Grid.Column="0"
-      Grid.Row="0"
-      SelectedItemChanged="MainTreeView_SelectedItemChanged"/>
+      Grid.Row="0"/>
+    <StackPanel
+      Name="BaselineStackPanelEven"
+      Grid.Column="0"
+      Grid.Row="1"
+      Orientation="Vertical"/>
+    <StackPanel
+      Name="BaselineStackPanelOdd"
+      Grid.Column="1"
+      Grid.Row="1"
+      Orientation="Vertical"/>
   </Grid>
 </Window>

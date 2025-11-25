@@ -2,10 +2,10 @@
 {
   internal class InstallConfig
   {
-    public InstallConfig(InstallItem[]? inputArray)
+    public InstallConfig(WorkItem[]? inputArray)
     {
-      Installs = inputArray;
+      WorkItems = inputArray;
     }
-    public InstallItem[]? Installs { get; set; }
+    public WorkItem[]? WorkItems { get; set; }
   }
 }
