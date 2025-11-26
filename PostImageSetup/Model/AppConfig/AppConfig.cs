@@ -1,4 +1,4 @@
-﻿namespace PostImageSetup.Class.AppConfig
+﻿namespace PostImageSetup.Model.AppConfig
 {
   internal class AppConfig
   {

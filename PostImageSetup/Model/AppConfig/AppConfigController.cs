@@ -2,7 +2,7 @@
 using System.Text.Json;
 using Windows.ApplicationModel.VoiceCommands;
 
-namespace PostImageSetup.Class.AppConfig
+namespace PostImageSetup.Model.AppConfig
 {
   internal class AppConfigController
   {

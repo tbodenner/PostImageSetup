@@ -4,16 +4,16 @@
     <_LastSelectedProfileId>C:\Users\OITPREBODENT\OneDrive - Department of Veterans Affairs\Desktop\GitHub\PostImageSetup\PostImageSetup\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Update="AddItemWindow.xaml.cs">
+    <Compile Update="View\AddItemWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="BaselineConfigWindow.xaml.cs">
+    <Compile Update="View\BaselineConfigWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="InstallConfigWindow.xaml.cs">
+    <Compile Update="View\InstallConfigWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="SiteConfigWindow.xaml.cs">
+    <Compile Update="View\SiteConfigWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

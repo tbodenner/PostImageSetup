@@ -1,4 +1,4 @@
-﻿namespace PostImageSetup.Class.SiteConfigs.Installs
+﻿namespace PostImageSetup.Model.SiteConfigs.Installs
 {
   internal class WorkItem
   {

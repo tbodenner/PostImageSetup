@@ -1,10 +1,10 @@
-﻿using PostImageSetup.Class.SiteConfigs.Baseline;
-using PostImageSetup.Class.SiteConfigs.Installs;
-using PostImageSetup.Class.SiteConfigs.Site;
+﻿using PostImageSetup.Model.SiteConfigs.Baseline;
+using PostImageSetup.Model.SiteConfigs.Installs;
+using PostImageSetup.Model.SiteConfigs.Site;
 using System.IO;
 using System.Text.Json;
 
-namespace PostImageSetup.Class
+namespace PostImageSetup.Model
 {
   internal static class JsonConfigReader
   {

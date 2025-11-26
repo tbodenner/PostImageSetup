@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Input;
 
 namespace PostImageSetup
 {
@@ -88,7 +86,7 @@ namespace PostImageSetup
 
     private void ButtonAdd_Click(object sender, RoutedEventArgs e)
     {
-      AddItemWindow window = new AddItemWindow(this);
+      AddItemWindow window = new(this);
       bool? dialogResult = window.ShowDialog();
       if (dialogResult == true)
       {

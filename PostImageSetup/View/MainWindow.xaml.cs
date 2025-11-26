@@ -1,10 +1,12 @@
-﻿using PostImageSetup.Class;
-using PostImageSetup.Class.AppConfig;
-using PostImageSetup.Class.SiteConfigs.Baseline;
-using PostImageSetup.Class.SiteConfigs.Installs;
-using PostImageSetup.Class.SiteConfigs.Site;
+﻿using PostImageSetup.Model;
+using PostImageSetup.Model.AppConfig;
+using PostImageSetup.Model.SiteConfigs.Baseline;
+using PostImageSetup.Model.SiteConfigs.Installs;
+using PostImageSetup.Model.SiteConfigs.Site;
+using PostImageSetup.ViewModel;
 using System.IO;
 using System.Windows;
+using System.Windows.Media;
 
 namespace PostImageSetup
 {
@@ -18,6 +20,7 @@ namespace PostImageSetup
     private readonly SiteConfig? _siteConfig;
     private readonly InstallConfig? _installConfig;
     private readonly BaselineConfig? _baselineConfig;
+    private readonly ColoredOutput _coloredOutput = new();
 
     public MainWindow()
     {
@@ -30,6 +33,13 @@ namespace PostImageSetup
       _siteConfig = JsonConfigReader.ReadConfig(_appConfigController.RootFolder);
       _installConfig = JsonConfigReader.ReadInstalls(_appConfigController.RootFolder);
       _baselineConfig = JsonConfigReader.ReadBaseline(_appConfigController.RootFolder);
+      ListViewTest.ItemsSource = _coloredOutput.Output;
+      _coloredOutput.OutputUpdated += ColoredOutput_OutputUpdated;
+    }
+
+    private void ColoredOutput_OutputUpdated(object? sender, EventArgs e)
+    {
+      ScrollViewerOutput.ScrollToEnd();
     }
 
     private static void CheckAppConfigFileExists()
@@ -96,6 +106,20 @@ namespace PostImageSetup
     private void Installer_InstallComplete(object? sender, EventArgs e)
     {
       MessageBox.Show("Install done!");
+    }
+
+    private void ButtonTestLine_Click(object sender, RoutedEventArgs e)
+    {
+      if (_siteConfig?.Banner != null)
+      {
+        foreach (BannerLine line in _siteConfig.Banner)
+        {
+          _coloredOutput.AddLine(line.Color, line.Text);
+        }
+      }
+      _coloredOutput.AddLine(Colors.Blue, "BLUE TEST");
+      _coloredOutput.AddLine(Colors.Red, "RED TEST");
+      _coloredOutput.AddLine(Colors.White, "WHITE TEST");
     }
   }
 }

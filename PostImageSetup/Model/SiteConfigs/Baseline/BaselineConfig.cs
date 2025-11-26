@@ -1,6 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 
-namespace PostImageSetup.Class.SiteConfigs.Baseline
+namespace PostImageSetup.Model.SiteConfigs.Baseline
 {
   internal class BaselineConfig
   {

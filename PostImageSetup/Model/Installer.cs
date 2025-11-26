@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.IO;
 using Windows.Storage.Search;
 
-namespace PostImageSetup.Class
+namespace PostImageSetup.Model
 {
   internal class Installer
   {
@@ -19,6 +19,7 @@ namespace PostImageSetup.Class
     private bool _isMsi = false;
     private bool _isExe = false;
     private bool _isInstalled = false;
+
     private readonly ProcessStartInfo _processStartInfo;
 
     public event EventHandler? InstallComplete;
